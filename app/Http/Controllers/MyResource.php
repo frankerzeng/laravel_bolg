@@ -33,7 +33,9 @@ class MyResource extends Controller {
         // 更新数据
         $rest = User_Bind::where("token", "q233232")->update(["token" => "sdlfjsdlfjl"]);
 
-        return [$user_list, $user_list1, $rest];
+        $title = "首页";
+
+        return [$user_list, $user_list1, $rest, $title];
     }
 
     /**
