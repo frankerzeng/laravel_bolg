@@ -1,6 +1,9 @@
 <?php
 // 创建模型命令
 //php artisan make:model User
+// php artisan migrate 生成表
+
+
 
 namespace App;
 

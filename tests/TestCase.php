@@ -14,10 +14,13 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      *
      * @return \Illuminate\Foundation\Application
      */
+    const LL = 1;
+
     public function createApplication()
     {
         $app = require __DIR__.'/../bootstrap/app.php';
 
+        define("LL","1");
         $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 
         return $app;

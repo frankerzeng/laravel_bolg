@@ -34,7 +34,7 @@ class MyResource extends Controller {
         $rest = User_Bind::where("token", "q233232")->update(["token" => "sdlfjsdlfjl"]);
 
         $title = "首页";
-
+        header("Access-Control-Allow-Origin:*");
         return [$user_list, $user_list1, $rest, $title];
     }
 
