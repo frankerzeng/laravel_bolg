@@ -4,16 +4,14 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class RoleServiceProvider extends ServiceProvider
-{
+class RoleServiceProvider extends ServiceProvider {
     /**
      * Bootstrap the application services.
      *
      * @return void
      */
-    public function boot()
-    {
-        //
+    public function boot() {
+
     }
 
     /**
@@ -21,8 +19,8 @@ class RoleServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
-        //
+    public function register() {
+//        $this->app->singleton('')
+
     }
 }
