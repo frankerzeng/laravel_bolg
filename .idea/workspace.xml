@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2212fbcf-0e42-438d-a44f-09e850d432bc" name="Default" comment="门面+服务提供者">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sql_log/2016-09-07.txt" afterPath="$PROJECT_DIR$/public/sql_log/2016-09-07.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MyResource.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MyResource.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User_Bind.php" afterPath="$PROJECT_DIR$/app/User_Bind.php" />
+    <list default="true" id="2212fbcf-0e42-438d-a44f-09e850d432bc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zeng.iws" />
@@ -386,7 +383,13 @@
       <option name="project" value="LOCAL" />
       <updated>1473250797157</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="门面+服务提供者">
+      <created>1473257830684</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1473257830684</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -432,9 +435,9 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="门面+服务提供者" />
     <MESSAGE value="查询构建器" />
-    <option name="LAST_COMMIT_MESSAGE" value="查询构建器" />
+    <MESSAGE value="门面+服务提供者" />
+    <option name="LAST_COMMIT_MESSAGE" value="门面+服务提供者" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
