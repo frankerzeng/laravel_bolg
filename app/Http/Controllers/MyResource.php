@@ -64,7 +64,36 @@ class MyResource extends Controller {
 
         /**原生sql end*/
 
-        return [$user_list, $user_list1, $rest, $title, $cache, $user_info];
+        /**事务*/
+        DB::transaction(function () {
+            $user_bind_id = time() . rand(1000, 9999) . "o";
+            DB::insert("insert into user_bind(user_bind_id) values(?)", [$user_bind_id]);
+        });
+
+        DB::beginTransaction();
+        $user_bind_id = time() . rand(1000, 9999) . "p";
+        DB::insert("insert into user_bind(user_bind_id) values(?)", [$user_bind_id]);
+        DB::commit();
+
+        DB::beginTransaction();
+        $user_bind_id = time() . rand(1000, 9999) . "q";
+        $rst = DB::insert("insert into user_bind(user_bind_id) values(?)", [$user_bind_id]);
+
+        DB::rollBack();
+
+
+        /**事务 end*/
+
+
+        /**原生sql end*/
+        /**原生sql end*/
+        /**原生sql end*/
+
+        // 依赖注入
+        $user_bind = App::make("user_bind");
+        $user_bind = $user_bind->timestamps;
+
+        return [$user_list, $user_list1, $rest, $title, $cache, $user_info, $rst, typeOf($user_bind)];
     }
 
     /**
