@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2212fbcf-0e42-438d-a44f-09e850d432bc" name="Default" comment="门面+服务提供者">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Providers/TableHelpProvider.php" />
-      <change type="DELETED" beforePath="E:\workspacephp\laravel_prj\zeng\.idea\misc.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sql_log/2016-09-07.txt" afterPath="$PROJECT_DIR$/public/sql_log/2016-09-07.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MyResource.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MyResource.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/SqlProvider.php" afterPath="$PROJECT_DIR$/app/Providers/SqlProvider.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User_Bind.php" afterPath="$PROJECT_DIR$/app/User_Bind.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zeng.iws" />
@@ -36,33 +30,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyResource.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyResource.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MyResource.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16153847" vertical-offset="1722" max-vertical-offset="3717">
-              <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+            <state vertical-scroll-proportion="-17.5" vertical-offset="1932" max-vertical-offset="3927">
+              <caret line="117" column="87" selection-start-line="117" selection-start-column="87" selection-end-line="117" selection-end-column="87" />
               <folding>
                 <element signature="e#40#76#0#PHP" expanded="true" />
-                <marker date="1473240820926" expanded="true" signature="1213:1231" placeholder="select * fro..USER..." />
-                <marker date="1473240820926" expanded="true" signature="1270:1316" placeholder="select * fro..USER_bind..." />
-                <marker date="1473240820926" expanded="true" signature="1371:1429" placeholder="select * fro..USER_bind..." />
-                <marker date="1473240820926" expanded="true" signature="1572:1617" placeholder="insert into ..." />
-                <marker date="1473240820926" expanded="true" signature="1692:1743" placeholder="update user_..." />
-                <marker date="1473240820926" expanded="true" signature="1833:1877" placeholder="delete from ..." />
-                <marker date="1473240820926" expanded="true" signature="1960:1978" placeholder="select * fro..user..." />
-                <marker date="1473240820926" expanded="true" signature="2146:2191" placeholder="insert into ..." />
-                <marker date="1473240820926" expanded="true" signature="2334:2379" placeholder="insert into ..." />
-                <marker date="1473240820926" expanded="true" signature="2539:2584" placeholder="insert into ..." />
+                <marker date="1473251848503" expanded="true" signature="1213:1231" placeholder="select * fro..USER..." />
+                <marker date="1473251848503" expanded="true" signature="1270:1316" placeholder="select * fro..USER_bind..." />
+                <marker date="1473251848503" expanded="true" signature="1371:1429" placeholder="select * fro..USER_bind..." />
+                <marker date="1473251848503" expanded="true" signature="1572:1617" placeholder="insert into ..." />
+                <marker date="1473251848503" expanded="true" signature="1692:1743" placeholder="update user_..." />
+                <marker date="1473251848503" expanded="true" signature="1833:1877" placeholder="delete from ..." />
+                <marker date="1473251848503" expanded="true" signature="1960:1978" placeholder="select * fro..user..." />
+                <marker date="1473251848503" expanded="true" signature="2146:2191" placeholder="insert into ..." />
+                <marker date="1473251848503" expanded="true" signature="2334:2379" placeholder="insert into ..." />
+                <marker date="1473251848503" expanded="true" signature="2539:2584" placeholder="insert into ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User_Bind.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User_Bind.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/User_Bind.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.366667" vertical-offset="379" max-vertical-offset="1113">
-              <caret line="40" column="25" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.24175824" vertical-offset="791" max-vertical-offset="1575">
+              <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
                 <element signature="e#91#130#0#PHP" expanded="true" />
               </folding>
@@ -152,8 +146,8 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/Providers/SqlProvider.php" />
-        <option value="$PROJECT_DIR$/app/User_Bind.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MyResource.php" />
+        <option value="$PROJECT_DIR$/app/User_Bind.php" />
       </list>
     </option>
   </component>
@@ -209,6 +203,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="zeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sql_log" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,7 +380,13 @@
       <option name="project" value="LOCAL" />
       <updated>1473235889328</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="查询构建器">
+      <created>1473250797157</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1473250797157</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -401,7 +433,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="门面+服务提供者" />
-    <option name="LAST_COMMIT_MESSAGE" value="门面+服务提供者" />
+    <MESSAGE value="查询构建器" />
+    <option name="LAST_COMMIT_MESSAGE" value="查询构建器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -488,6 +521,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/sql_log/2016-09-07.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5277777" vertical-offset="1638" max-vertical-offset="15498">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/TableHelpProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1666667" vertical-offset="19" max-vertical-offset="714">
@@ -496,32 +540,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User_Bind.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MyResource.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.366667" vertical-offset="379" max-vertical-offset="1113">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="25" />
+        <state vertical-scroll-proportion="-17.5" vertical-offset="1932" max-vertical-offset="3927">
+          <caret line="117" column="87" selection-start-line="117" selection-start-column="87" selection-end-line="117" selection-end-column="87" />
           <folding>
-            <element signature="e#91#130#0#PHP" expanded="true" />
+            <element signature="e#40#76#0#PHP" expanded="true" />
+            <marker date="1473251848503" expanded="true" signature="1213:1231" placeholder="select * fro..USER..." />
+            <marker date="1473251848503" expanded="true" signature="1270:1316" placeholder="select * fro..USER_bind..." />
+            <marker date="1473251848503" expanded="true" signature="1371:1429" placeholder="select * fro..USER_bind..." />
+            <marker date="1473251848503" expanded="true" signature="1572:1617" placeholder="insert into ..." />
+            <marker date="1473251848503" expanded="true" signature="1692:1743" placeholder="update user_..." />
+            <marker date="1473251848503" expanded="true" signature="1833:1877" placeholder="delete from ..." />
+            <marker date="1473251848503" expanded="true" signature="1960:1978" placeholder="select * fro..user..." />
+            <marker date="1473251848503" expanded="true" signature="2146:2191" placeholder="insert into ..." />
+            <marker date="1473251848503" expanded="true" signature="2334:2379" placeholder="insert into ..." />
+            <marker date="1473251848503" expanded="true" signature="2539:2584" placeholder="insert into ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MyResource.php">
+    <entry file="file://$PROJECT_DIR$/app/User_Bind.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16153847" vertical-offset="1722" max-vertical-offset="3717">
-          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.24175824" vertical-offset="791" max-vertical-offset="1575">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
           <folding>
-            <element signature="e#40#76#0#PHP" expanded="true" />
-            <marker date="1473240820926" expanded="true" signature="1213:1231" placeholder="select * fro..USER..." />
-            <marker date="1473240820926" expanded="true" signature="1270:1316" placeholder="select * fro..USER_bind..." />
-            <marker date="1473240820926" expanded="true" signature="1371:1429" placeholder="select * fro..USER_bind..." />
-            <marker date="1473240820926" expanded="true" signature="1572:1617" placeholder="insert into ..." />
-            <marker date="1473240820926" expanded="true" signature="1692:1743" placeholder="update user_..." />
-            <marker date="1473240820926" expanded="true" signature="1833:1877" placeholder="delete from ..." />
-            <marker date="1473240820926" expanded="true" signature="1960:1978" placeholder="select * fro..user..." />
-            <marker date="1473240820926" expanded="true" signature="2146:2191" placeholder="insert into ..." />
-            <marker date="1473240820926" expanded="true" signature="2334:2379" placeholder="insert into ..." />
-            <marker date="1473240820926" expanded="true" signature="2539:2584" placeholder="insert into ..." />
+            <element signature="e#91#130#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

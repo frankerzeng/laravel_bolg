@@ -43,5 +43,27 @@ class User_Bind extends Model {
         return $user_list;
     }
 
+    public function getWhere() {
+        $user_list = DB::table($this->table)->whereIn('channel', ["ty"])->get();
+        $user_list1 = DB::table($this->table)->whereNotIn('channel', ["ty"])->get();
+        $user_list2 = DB::table($this->table)->whereBetween('channel', ["ty", ""])->get();
+
+        return [count($user_list), count($user_list1), count($user_list2), DB::table($this->table)->where("channel", "IN", "ar")->where("id", "1")];
+    }
+
+    public function getOrder($condition) {
+        $user_list = DB::table($this->table)->where($condition[0], $condition[1])->orderBy("user_bind_id", "ASC")->get();
+        return $user_list;
+    }
+
+    public function add($data) {
+        $user_info = Db::table($this->table)->insert($data);
+        return $user_info;
+    }
+
+    public function del($condition) {
+        $user_info = Db::table($this->table)->where('channel', $condition)->delete();
+        return $user_info;
+    }
 
 }

@@ -103,10 +103,19 @@ class MyResource extends Controller {
 //        $getLists = $user_bind->getLists(["channel"]);
         $getAs = $user_bind->getAs(["channel", "ty"]);
         $getWhere = $user_bind->getWhere();
+        $condition = ["channel", "ty"];
+        $getOrder = $user_bind->getOrder($condition);
+        // 插入一条
+        $add = $user_bind->add(["user_bind_id" => microtime(), "channel" => "tyy"]);
+        // 插入多条
+        $add1 = $user_bind->add([["user_bind_id" => microtime(), "channel" => "tyy"]]);
+
+
+        $del = $user_bind->del('tyy');
 
 
         return [$user_list, $user_list1, $rest, $title, $cache, count($user_info), $rst, $timestamps, count($user_all), $user_one,
-            $user_count/*, $getLists*/, $getAs, $getWhere
+            $user_count/*, $getLists*/, $getAs, $getWhere, $getOrder, $add, $add1, $del
         ];
     }
 
