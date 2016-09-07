@@ -91,9 +91,22 @@ class MyResource extends Controller {
 
         // 依赖注入
         $user_bind = App::make("user_bind");
-        $user_bind = $user_bind->timestamps;
+        $timestamps = $user_bind->timestamps;
 
-        return [$user_list, $user_list1, $rest, $title, $cache, $user_info, $rst, typeOf($user_bind)];
+        new \stdClass();
+        /**查询构建*/
+        $user_all = $user_bind->getAll();
+//        $user_all = new User_Bind();
+//        $user_all = $user_all->getAll();
+        $user_one = $user_bind->getOne(["channel", "ty"]);
+        $user_count = $user_bind->getCount();
+//        $getLists = $user_bind->getLists(["channel"]);
+        $getAs = $user_bind->getAs(["channel", "ty"]);
+
+
+        return [$user_list, $user_list1, $rest, $title, $cache, count($user_info), $rst, $timestamps, count($user_all), $user_one,
+            $user_count/*, $getLists*/, $getAs
+        ];
     }
 
     /**

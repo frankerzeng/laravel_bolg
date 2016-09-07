@@ -156,8 +156,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        App\Providers\SqlProvider::class
+        App\Providers\SqlProvider::class,
+        App\Providers\TableHelpProvider::class,
 
+        // 代码提示模块
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
     ],
 
     /*

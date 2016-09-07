@@ -17,7 +17,7 @@ class SqlProvider extends ServiceProvider {
     //打印sql执行语句
     public function boot() {
         DB::listen(function ($query) {
-            $f = fopen("./sql_log/" . date("Y-m-d", time()) . ".txt", "a+");
+            $f = fopen("." . DIRECTORY_SEPARATOR . "sql_log" . DIRECTORY_SEPARATOR . date("Y-m-d", time()) . ".txt", "a+");
             fwrite($f, $query->sql . "\n");
             fclose($f);
         });
@@ -29,9 +29,9 @@ class SqlProvider extends ServiceProvider {
      * @return void
      */
     public function register() {
-        $this->app->bind('user_bind', function ($app) {
-            return new User_Bind();
-        });
+//        $this->app->bind('user_bind', function ($app) {
+//            return new User_Bind();
+//        });
         // 单例
 //        $this->app::singleton('zeng', function () {
 //            return new User_Bind();
