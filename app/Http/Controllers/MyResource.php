@@ -102,10 +102,11 @@ class MyResource extends Controller {
         $user_count = $user_bind->getCount();
 //        $getLists = $user_bind->getLists(["channel"]);
         $getAs = $user_bind->getAs(["channel", "ty"]);
+        $getWhere = $user_bind->getWhere();
 
 
         return [$user_list, $user_list1, $rest, $title, $cache, count($user_info), $rst, $timestamps, count($user_all), $user_one,
-            $user_count/*, $getLists*/, $getAs
+            $user_count/*, $getLists*/, $getAs, $getWhere
         ];
     }
 

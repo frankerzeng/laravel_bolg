@@ -38,7 +38,7 @@ class User_Bind extends Model {
         return $user_list;
     }
 
-    public function getAs($condition){
+    public function getAs($condition) {
         $user_list = DB::table($this->table)->select("token as tk")->where($condition[0], $condition[1])->get();
         return $user_list;
     }
