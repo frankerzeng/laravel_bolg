@@ -13,5 +13,8 @@ class Shop extends Model {
     // 不打上时间戳
     public $timestamps = false;
 
+    // 设置批量赋值属性
+    protected $fillable = ['shop_id', 'name'];
+
 
 }

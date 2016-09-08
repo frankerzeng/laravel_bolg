@@ -39,7 +39,12 @@ class MyResource extends Controller {
         /**eloquent ORM end*/
 
         $title = "首页";
-        header("Access-Control-Allow-Origin:*");
+
+        $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
+        $allow_origin = ['http://localhost:63343/zeng/dist*'];
+//        if (in_array($origin, $allow_origin)) {
+            header("Access-Control-Allow-Origin:" . $origin);
+//        }
 
 
         // facade 门面
@@ -118,9 +123,10 @@ class MyResource extends Controller {
         /**eloquent ORM*/
         $shop_all = Shop::all();
 
+        // 设置批量赋值属性
+        $shop_op = Shop::create(["shop_id" => microtime(), "name" => date("ymd hms")]);
 
         /**eloquent ORM     end*/
-
 
         $ret = [$user_list, $user_list1, $rest, $title, $cache, count($user_info), $rst, $timestamps, count($user_all), $user_one,
             $user_count/*, $getLists*/, $getAs, $getWhere, $getOrder, $add, $add1, $del
