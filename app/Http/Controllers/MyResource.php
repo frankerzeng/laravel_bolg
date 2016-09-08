@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Shop;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 
@@ -114,9 +115,19 @@ class MyResource extends Controller {
         $del = $user_bind->del('tyy');
 
 
-        return [$user_list, $user_list1, $rest, $title, $cache, count($user_info), $rst, $timestamps, count($user_all), $user_one,
+        /**eloquent ORM*/
+        $shop_all = Shop::all();
+
+
+        /**eloquent ORM     end*/
+
+
+        $ret = [$user_list, $user_list1, $rest, $title, $cache, count($user_info), $rst, $timestamps, count($user_all), $user_one,
             $user_count/*, $getLists*/, $getAs, $getWhere, $getOrder, $add, $add1, $del
         ];
+        $ret1 = [$shop_all];
+
+        return $ret1;
     }
 
     /**

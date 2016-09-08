@@ -1,4 +1,5 @@
 <?php
+//php artisan make:model User
 
 namespace App;
 
@@ -9,8 +10,8 @@ class Shop extends Model {
 
     protected $primaryKey = "shop_id";
 
-
-
+    // 不打上时间戳
+    public $timestamps = false;
 
 
 }
