@@ -169,7 +169,33 @@ class MyResource extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id) {
-        return view();
+
+        $arr1 = [2, 3, 6, 9];
+        $arr2 = [4, 5, 8, 10];
+        $arr3 = [];
+        $arr4 = [];
+
+        $boo = function ($i, $j) use ($arr1, $arr2) {
+            return $i < count($arr1) && $j < count($arr2);
+        };
+
+
+        for ($i = 0, $j = 0; $i < count($arr1) && $j < count($arr2);) {
+            $arr4[] = $i;
+            $arr4[] = $j;
+            if ($arr1[$i] < $arr2[$j]) {
+                $arr3[] = $arr1[$i];
+                $i++;
+            } else {
+                $arr3[] = $arr2[$j];
+                $j++;
+            }
+        }
+
+
+        return $arr3;
+
+//        return view();
     }
 
     /**
