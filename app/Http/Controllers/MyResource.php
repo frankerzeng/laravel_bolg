@@ -6,6 +6,7 @@ use App\Shop;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 
+use Gate;
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
 use App\User_Bind;
@@ -43,7 +44,7 @@ class MyResource extends Controller {
         $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
         $allow_origin = ['http://localhost:63343/zeng/dist*'];
 //        if (in_array($origin, $allow_origin)) {
-            header("Access-Control-Allow-Origin:" . $origin);
+        header("Access-Control-Allow-Origin:" . $origin);
 //        }
 
 
@@ -128,10 +129,16 @@ class MyResource extends Controller {
 
         /**eloquent ORM     end*/
 
+        $shop = Shop::findOrFail("568e2bad26264c0d");
+        if (Gate::denies('has-address', $shop)) {
+//            abort(403,"d");
+        }
+
+
         $ret = [$user_list, $user_list1, $rest, $title, $cache, count($user_info), $rst, $timestamps, count($user_all), $user_one,
             $user_count/*, $getLists*/, $getAs, $getWhere, $getOrder, $add, $add1, $del
         ];
-        $ret1 = [$shop_all];
+        $ret1 = [count($shop_all), $this->getRouter()];
 
         return $ret1;
     }
