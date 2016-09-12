@@ -192,8 +192,10 @@ class MyResource extends Controller {
             }
         }
 
+        $a = ["2"=>2, "3"=>3];
+        $a2 = ["4"=>4, "5"=>5];
 
-        return $arr3;
+        return [$arr3, $a + $a2];
 
 //        return view();
     }
