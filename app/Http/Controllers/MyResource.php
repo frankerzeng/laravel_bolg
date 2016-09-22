@@ -149,7 +149,7 @@ class MyResource extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return __FUNCTION__;
+        return Shop::count();
     }
 
     /**
@@ -159,7 +159,12 @@ class MyResource extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        for ($i = 0; $i < 10000; $i++) {
+//            $shop_op = Shop::create(["shop_id" => microtime() . rand(10000, 99999), "name" => date("ymd hms")]);
+            $shop_op = Shop::where("name", "160920 030959")->update(["name"=>"dd"]);
+        }
+
+        return ;
     }
 
     /**
@@ -169,7 +174,11 @@ class MyResource extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id) {
-
+        for ($i = 0; $i < 10000; $i++) {
+//            $shop_op = Shop::create(["shop_id" => microtime() . rand(10000, 99999), "name" => date("ymd hms")]);
+            $shop_op = Shop::where("name", "dd")->update(["name"=>"ff"]);
+        }
+        return;
         $arr1 = [2, 3, 6, 9];
         $arr2 = [4, 5, 8, 10];
         $arr3 = [];
@@ -192,8 +201,8 @@ class MyResource extends Controller {
             }
         }
 
-        $a = ["2"=>2, "3"=>3];
-        $a2 = ["4"=>4, "5"=>5];
+        $a = ["2" => 2, "3" => 3];
+        $a2 = ["4" => 4, "5" => 5];
 
         return [$arr3, $a + $a2];
 
