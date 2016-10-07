@@ -26,4 +26,4 @@ Route::resource('/resource', "MyResource");
 Route::get("aboutme", "AboutRoute@aboutme");
 
 // rest 导航
-Route::get("titleIndex", "TitleIndex");
+Route::resource("/title", "TitleIndex");
