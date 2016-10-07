@@ -1,5 +1,5 @@
 <?php
-
+//php artisan make:controller ArticleController
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
