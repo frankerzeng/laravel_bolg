@@ -8,7 +8,7 @@ use App\Http\Requests;
 
 class AdminController extends Controller {
     public function login_page() {
-        \View::addExtension('html','php');
-        return view('login_page.html');
+        \View::addExtension('html', 'php');
+        return view('admin.login_page');
     }
 }

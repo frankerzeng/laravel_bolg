@@ -11,7 +11,9 @@
 |
 */
 
+// index
 Route::get("/index", "IndexController@index");
+Route::get("index/get_menu", "IndexController@get_menu");
 
 // todo 跳转
 Route::get('/', function () {
@@ -33,3 +35,5 @@ Route::resource("/title", "TitleIndex");
 
 // 参数验证
 Route::get("edit", "EditController@postdata");
+
+Route::get("login", "AdminController@login_page");
