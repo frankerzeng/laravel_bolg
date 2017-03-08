@@ -20,6 +20,8 @@ class MyResource extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+        header("Access-Control-Allow-Origin:" . "*");
+        return [rand(21, 33), 13,basename('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'])];
 
         //
         $user_list = User_Bind::all();
@@ -44,7 +46,8 @@ class MyResource extends Controller {
         $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
         $allow_origin = ['http://localhost:63343/zeng/dist*'];
 //        if (in_array($origin, $allow_origin)) {
-        header("Access-Control-Allow-Origin:" . $origin);
+//        header("Access-Control-Allow-Origin:" . $origin);
+        header("Access-Control-Allow-Origin:" . "*");
 //        }
 
 
@@ -161,10 +164,10 @@ class MyResource extends Controller {
     public function store(Request $request) {
         for ($i = 0; $i < 10000; $i++) {
 //            $shop_op = Shop::create(["shop_id" => microtime() . rand(10000, 99999), "name" => date("ymd hms")]);
-            $shop_op = Shop::where("name", "160920 030959")->update(["name"=>"dd"]);
+            $shop_op = Shop::where("name", "160920 030959")->update(["name" => "dd"]);
         }
 
-        return ;
+        return;
     }
 
     /**
@@ -176,7 +179,7 @@ class MyResource extends Controller {
     public function show($id) {
         for ($i = 0; $i < 10000; $i++) {
 //            $shop_op = Shop::create(["shop_id" => microtime() . rand(10000, 99999), "name" => date("ymd hms")]);
-            $shop_op = Shop::where("name", "dd")->update(["name"=>"ff"]);
+            $shop_op = Shop::where("name", "dd")->update(["name" => "ff"]);
         }
         return;
         $arr1 = [2, 3, 6, 9];

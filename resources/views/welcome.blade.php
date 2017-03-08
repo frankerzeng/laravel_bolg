@@ -35,11 +35,16 @@
             }
         </style>
     </head>
+    <?php echo phpinfo();?>
+
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laraveldd 5</div>
+                <div class="title">Laraveldd 5
+
+                </div>
             </div>
         </div>
     </body>
+    <br/>
 </html>

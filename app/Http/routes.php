@@ -11,8 +11,11 @@
 |
 */
 
+Route::get("/index", "IndexController@index");
+
+// todo 跳转
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 // 路由接控制器
@@ -27,3 +30,6 @@ Route::get("aboutme", "AboutRoute@aboutme");
 
 // rest 导航
 Route::resource("/title", "TitleIndex");
+
+// 参数验证
+Route::get("edit", "EditController@postdata");
