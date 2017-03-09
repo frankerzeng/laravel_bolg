@@ -1,0 +1,27 @@
+#divLeftId {
+    border: 2px solid red;
+    width: 75%;
+    /*height: 200px;*/
+    float: left;
+}
+
+#divRightId {
+    border: 2px solid red;
+    width: 20%;
+    margin-right: 20px;
+    /*height: 200px;*/
+    float: right;
+}
+
+#divLeftIdArticalesId {
+    border: 2px solid red;
+    /*height: 200px;*/
+}
+
+#divLeftIdPagesId {
+    border: 2px solid red;
+    height: 80px;
+}
+
+
+
