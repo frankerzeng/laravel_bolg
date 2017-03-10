@@ -17,9 +17,9 @@ class SqlProvider extends ServiceProvider {
     //打印sql执行语句
     public function boot() {
         DB::listen(function ($query) {
-            $f = fopen("." . DIRECTORY_SEPARATOR . "sql_log" . DIRECTORY_SEPARATOR . date("Y-m-d", time()) . ".txt", "a+");
-            fwrite($f, $query->sql . "\n");
-            fclose($f);
+//            $f = fopen("." . DIRECTORY_SEPARATOR . "sql_log" . DIRECTORY_SEPARATOR . date("Y-m-d", time()) . ".txt", "a+");
+//            fwrite($f, $query->sql . "\n");
+//            fclose($f);
         });
     }
 

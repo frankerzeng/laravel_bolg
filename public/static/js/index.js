@@ -3,14 +3,14 @@
  */
 var divLeftIdArticalesId = $("#divLeftIdArticalesId");
 var index_funtion = function (page) {
-    var articles = $.ajax({url: "/article", async: false, data: {page: page, size: 10}});
+    var articles = $.ajax({url: "/articles", async: false, data: {page: page, size: 10}});
     var page_total = articles.responseJSON.total_page;
     articles = articles.responseJSON.list;
     var html = '';
     for (var i in articles) {
         if (articles[i].title_img == 0) {
             var html_tpm = '<div class="container" style="width: auto;">' +
-                '<div class="jumbotron">' +
+                '<div class="jumbotron" style="background-color: #fff">' +
                 '<h2 style="margin-top: -20px">' +
                 articles[i].title +
                 '</h2>' +

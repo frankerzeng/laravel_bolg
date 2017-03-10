@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 class IndexController extends Controller {
-    public function before() {
 
-        sleep(111);
-        echo 11;
+    // 中间件-认证
+    public function __construct() {
+        //        $this->middleware('auth');
     }
 
     public function after() {

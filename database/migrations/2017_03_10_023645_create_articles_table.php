@@ -1,24 +1,20 @@
 <?php
-/*
- * php artisan make:migration create_user_send_table --create=user_send
- */
-
-
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserSendTable extends Migration
-{
+class CreateArticlesTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('user_send', function (Blueprint $table) {
+    public function up() {
+        Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
+            $table->tinyInteger('title_img');
+            $table->text('title');
+            $table->longText('content');
             $table->timestamps();
         });
     }
@@ -28,8 +24,7 @@ class CreateUserSendTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::drop('user_send');
+    public function down() {
+        Schema::drop('articles');
     }
 }

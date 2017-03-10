@@ -16,12 +16,17 @@ Route::get("/index", "IndexController@index");
 Route::get("index/get_menu", "IndexController@get_menu");
 
 // articles
-Route::get("/article", "ArticleController@get_list");
+Route::get("/articles", "ArticleController@get_list");
 Route::get("/articles/{id}", "ArticleController@get");
+
+// test //todo
+Route::get("/article/sql", "ArticleController@sql");
+
 
 // todo 跳转
 Route::get('/', function () {
-    return view('index');
+    //    return view('index');
+    return redirect('/index');
 });
 
 // 路由接控制器
