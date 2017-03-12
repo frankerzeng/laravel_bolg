@@ -7,24 +7,30 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller {
+
+    private $table = 'articles';
+
+    public function __construct() {
+//        $this->middleware();
+    }
+
     public function get_list(Request $request) {
 
-        $page = $request->get('page');
+        $page = $request->get('page', 1);
 
-        $return = [
-            [
-                'id' => 1,
-                'title_img' => 0,
-                'title' => '关于大可拉进来踢了',
-                'content' => '撒旦法撒旦法胜多负少都是对方水电费是双方都说的发射的多的地方是否说的
-                sd的于大可拉进来踢了于大可拉进来踢
-                sd的于大可拉进来踢了于大可拉进来踢
-                sd的于大可拉进来踢了于大可拉进来踢
-                了'
-            ],
-        ];
+        $keyword = $request->get('keyword');
 
-        return ['list' => $return, 'total_page' => 3];
+        $size = $request->get('size', \Config::get('app.default_page_size'));
+
+        $f_db = \DB::table($this->table)->when($keyword != null, function ($query) use ($keyword) {
+            return $query->where('title', 'like', $keyword);
+        });
+
+        $list = $f_db->offset($size * ($page - 1))->limit($size)->get();
+
+        $count = $f_db->count();
+
+        return ['list' => $list, 'total_page' => $count];
     }
 
     public function get($id) {
@@ -49,7 +55,7 @@ class ArticleController extends Controller {
         $articles = \DB::select('select * from articles WHERE 1=?', [1]);
         $articles = \DB::insert('insert into articles(title) VALUES (?)', [1]);
         $articles = \DB::update('update articles set content=? WHERE title=?', [112, 1]);
-//                $articles = \DB::delete('delete from articles WHERE 1=?', [1]);
+        //                $articles = \DB::delete('delete from articles WHERE 1=?', [1]);
         //        \DB::statement('show databases');
 
         \DB::beginTransaction();
