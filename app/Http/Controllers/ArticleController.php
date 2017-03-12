@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller {
@@ -11,10 +12,20 @@ class ArticleController extends Controller {
     private $table = 'articles';
 
     public function __construct() {
-//        $this->middleware();
+        //        $this->middleware([]);
+        //        $this->middleware([],['only'=>[]]);
+        //        $this->middleware([],['except'=>[]]);
     }
 
-    public function get_list(Request $request) {
+    public function get_list(Request $request, Response $response) {
+        //        echo $request->url();
+        //        echo $request->getUriForPath('index');
+        //        echo $request->fullUrl();
+        //        print_r($request->all());
+        //        $response->withCookie(cookie('narrme', 'val', 1000));
+        //        \Cookie::queue('name_queue', 'dddd', 100);
+
+        //        return response("ddssdfs")->cookie("<","d");
 
         $page = $request->get('page', 1);
 
