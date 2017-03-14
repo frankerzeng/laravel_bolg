@@ -157,7 +157,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // 自定义
+        App\Providers\SendMailServiceProvider::class,
 
+        
         // 代码提示模块
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
     ],
