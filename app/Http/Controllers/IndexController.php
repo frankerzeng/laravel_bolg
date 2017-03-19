@@ -25,11 +25,10 @@ class IndexController extends Controller {
         \View::addExtension('html', 'php');
 
 
-        echo $dd = json_encode(array("aa"=>'sdf'));
-        $ap = \App::make("Helper_String");
-        print_r($ap->str2arr($dd));
-        echo 11;
-        return;
+//        echo $dd = json_encode(array("aa"=>'sdf'));
+//        $ap = \App::make("Helper_String");
+//        print_r($ap->str2arr($dd));
+//        echo 11;
         return view('index.index');
     }
 

@@ -23,10 +23,11 @@
 
         <div class="checkbox">
             <label>
-                <input type="checkbox" value="remember-me"> Remember me
+                <input type="checkbox" value="0" id="rememberId"> Remember me
             </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <input class="btn btn-lg btn-primary btn-block" type="button" id="signId" value="Sign in">
+        <input type="hidden" name="_token" id="csrfTokenId" value="<?php echo csrf_token(); ?>"/>
     </form>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 
@@ -35,5 +36,6 @@
     <!--integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"-->
     <!--crossorigin="anonymous"></script>-->
 </div>
+<script src="/static/js/admin/login.js"></script>
 </body>
 </html>

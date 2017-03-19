@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable {
+class User extends Authenticatable
+{
     /**
      * The attributes that are mass assignable.
      *
@@ -15,7 +16,7 @@ class User extends Authenticatable {
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
@@ -23,6 +24,10 @@ class User extends Authenticatable {
         'password', 'remember_token',
     ];
 
-    protected $table = "user_auth";
-
+    public static $rules = array(
+        'name' => 'required|min:2',
+        'email' => 'required|email',
+        //        'email' => 'required|email|unique:users',
+        'password' => 'required|alpha_num|between:6,12',
+    );
 }

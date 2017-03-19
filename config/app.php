@@ -3,6 +3,12 @@
 return [
 
     'default_page_size' => 10,
+    'about_me' => [
+        'name' => "frank",
+        'email' => "frankerzeng@163.com",
+        'mobile' => "18583660732",
+        'password' => "111111", // todo 改密码
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application Environment

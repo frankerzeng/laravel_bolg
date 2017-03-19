@@ -46,3 +46,6 @@ Route::resource("/title", "TitleIndex");
 Route::get("edit", "EditController@postdata");
 
 Route::get("login", "AdminController@login_page");
+
+Route::post('/login/users', 'UsersController@login');
+Route::get('/login/after_login', 'UsersController@after_login');

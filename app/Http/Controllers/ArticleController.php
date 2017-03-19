@@ -12,9 +12,9 @@ class ArticleController extends Controller {
     private $table = 'articles';
 
     public function __construct() {
-        //        $this->middleware([]);
-        //        $this->middleware([],['only'=>[]]);
-        //        $this->middleware([],['except'=>[]]);
+        $this->middleware([]);
+        //                $this->middleware([],['only'=>[]]);
+        $this->middleware(['auth'], ['except' => ['get_list', 'get']]);
     }
 
     public function get_list(Request $request, Response $response) {
