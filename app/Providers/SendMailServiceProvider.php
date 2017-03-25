@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Helper\String;
+use App\Helper\String as Help_Srting;
 use Illuminate\Support\ServiceProvider;
 
 class SendMailServiceProvider extends ServiceProvider {
@@ -24,7 +24,7 @@ class SendMailServiceProvider extends ServiceProvider {
         // 写法1
         //        后面的调用都会从容器中返回相同的实例
         $this->app->singleton('Helper_String', function () {
-            return new String();
+            return new Help_Srting();
         });
 
         // 写法2

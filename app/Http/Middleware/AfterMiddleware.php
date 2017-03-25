@@ -21,6 +21,7 @@ class AfterMiddleware {
         $file = fopen($file_name, 'a+');
         fwrite($file, date('H-i-s') . '------' . json_encode(\DB::getQueryLog(), JSON_UNESCAPED_UNICODE) . "\n");
         fwrite($file, '------------------------------------------------------------------------' . "\n");
+        fwrite($file, "\n");
         fclose($file);
 
         return $response;

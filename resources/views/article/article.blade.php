@@ -10,7 +10,7 @@
 <div class="blog-post">
     <h2 class="blog-post-title">{{$data['title']}}</h2>
 
-    <p class="blog-post-meta">{{$data['date']}}<a href="#">Mark</a></p>
+    <p class="blog-post-meta">{{$data['updated_at']}}<a href="#">Mark</a></p>
     {{$data['content']}}
 
 </div>

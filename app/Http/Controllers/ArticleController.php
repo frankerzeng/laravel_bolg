@@ -46,12 +46,17 @@ class ArticleController extends Controller {
 
     public function get($id) {
 
-        $data = [
-            'id' => $id,
-            'title' => '3333',
-            'content' => 'sldklfsdf',
-            'date' => date('Y-m-d H:m:s', time()),
-        ];
+        $data = \DB::table($this->table)->where("id", $id)->get();
+        $data = get_object_vars($data[0]);
+
+//        $data = [
+//            'id' => $id,
+//            'title' => '3333',
+//            'content' => 'sldklfsdf',
+//            'date' => date('Y-m-d H:m:s', time()),
+//        ];
+//        print_r($data);
+//        return;
         return view('article.article', ['data' => $data]);
     }
 
