@@ -17,7 +17,8 @@ Route::get("index/get_menu", "IndexController@get_menu");
 
 // articles
 Route::get("/articles", "ArticleController@get_list");
-Route::get("/articles/{id}", "ArticleController@get");
+Route::get("/articles/{id}", "ArticleController@view");
+Route::get("/article/{id}", "ArticleController@get");
 
 // test //todo
 Route::get("/article/sql", "ArticleController@sql");

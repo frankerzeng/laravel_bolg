@@ -14,7 +14,7 @@ class ArticleController extends Controller {
     public function __construct() {
         $this->middleware([]);
         //                $this->middleware([],['only'=>[]]);
-        $this->middleware(['auth'], ['except' => ['get_list', 'get']]);
+        $this->middleware(['auth'], ['except' => ['get_list', 'get', 'view']]);
     }
 
     public function get_list(Request $request, Response $response) {
@@ -45,26 +45,20 @@ class ArticleController extends Controller {
     }
 
     public function get($id) {
-
         $data = \DB::table($this->table)->where("id", $id)->get();
-        $data = get_object_vars($data[0]);
 
-//        $data = [
-//            'id' => $id,
-//            'title' => '3333',
-//            'content' => 'sldklfsdf',
-//            'date' => date('Y-m-d H:m:s', time()),
-//        ];
-//        print_r($data);
-//        return;
-        return view('article.article', ['data' => $data]);
+        return get_object_vars($data[0]);
+    }
+
+    public function view($id) {
+        \View::addExtension('html', 'php');
+
+        return view('article.article', ['data' => $id]);
     }
 
     public function sql() {
 
-        return [
-            $this->sql_test(),
-        ];
+        return [$this->sql_test(),];
     }
 
     private function sql_test() {
@@ -96,9 +90,7 @@ class ArticleController extends Controller {
         })->get();
 
         // insert
-        \DB::table($t)->insert([
-            'title' => '2'
-        ]);
+        \DB::table($t)->insert(['title' => '2']);
 
         // update
         \DB::table($t)->where('title', '2')->update(['title' => '33', 'created_at' => '2010-11-11 11:12:21']);

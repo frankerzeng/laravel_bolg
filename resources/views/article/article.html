@@ -5,14 +5,13 @@
     <title></title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/article.css">
 </head>
 <body>
-<div class="blog-post">
-    <h2 class="blog-post-title">{{$data['title']}}</h2>
 
-    <p class="blog-post-meta">{{$data['updated_at']}}<a href="#">Mark</a></p>
-    {{$data['content']}}
-
-</div>
+<div id="articleId"></div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="/static/js/lib/markdown.js"></script>
+<script src="/static/js/article.js"></script>
 </body>
 </html>
