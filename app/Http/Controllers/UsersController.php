@@ -28,6 +28,9 @@ class UsersController extends Controller {
             \Auth::logout();
 
             if (\Auth::attempt(["email" => $data['email'], 'password' => $data['password']])) {
+                // 用户名登录，或者手机号
+                // if (\Auth::attempt(["name" => 'frank1', 'password' => '111111']))
+
                 return ["code" => 0, "msg" => "success"];
             } else {
                 return ["code" => 1, "msg" => "fail"];
@@ -37,7 +40,13 @@ class UsersController extends Controller {
         }
     }
 
-    public function after_login() {
+    public function after_login(Request $request) {
+         if (\Auth::attempt(["name" => 'frank', 'password' => '111111']))
+
+        var_dump($request->user());
+        var_dump('----');
+        var_dump(\Auth::user());
+        return;
         if (\Auth::check()) {
             echo "11 success";
         } else {
