@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Navigation;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
 class IndexController extends Controller {
+
+    private $table = 'navigation';
 
     // 中间件-认证
     public function __construct() {
@@ -25,31 +28,34 @@ class IndexController extends Controller {
         \View::addExtension('html', 'php');
 
 
-//        echo $dd = json_encode(array("aa"=>'sdf'));
-//        $ap = \App::make("Helper_String");
-//        print_r($ap->str2arr($dd));
-//        echo 11;
+        //        echo $dd = json_encode(array("aa"=>'sdf'));
+        //        $ap = \App::make("Helper_String");
+        //        print_r($ap->str2arr($dd));
+        //        echo 11;
         return view('index.index');
     }
 
     public function get_menu() {
-        $menu = [
-            [
-                "title" => "首页",
-                "link" => "index",
-                "css" => "font-weight:bold;font-size: larger;margin-left:40px",
-            ],
-            [
-                "title" => "文章",
-                "link" => "articles",
-                "css" => ""
-            ],
-            [
-                "title" => "Git",
-                "link" => "http://github.com/frankerzeng",
-                "css" => ""
-            ],
-        ];
-        return $menu;
+        /* $menu = [
+             [
+                 "title" => "首页",
+                 "link" => "index",
+                 "css" => "font-weight:bold;font-size: larger;margin-left:40px",
+             ],
+             [
+                 "title" => "文章",
+                 "link" => "articles",
+                 "css" => ""
+             ],
+             [
+                 "title" => "Git",
+                 "link" => "http://github.com/frankerzeng",
+                 "css" => ""
+             ],
+         ];*/
+
+        $list = \DB::table($this->table)->where('status', Navigation::STATUS_ONLINE)->get();
+
+        return $list;
     }
 }
