@@ -17,6 +17,15 @@ $sheel2 = shell_exec("/bin/ll");
 print_r($sheel1);
 print_r($sheel2);
 
+print_r('-----------------');
+
+
+$sheel1 = exec("ll");
+$sheel2 = exec("/bin/ll");
+
+print_r($sheel1);
+print_r($sheel2);
+
 $rest = shell_exec("cd /usr/local/nginx/html/blog && git pull git@github.com:frankerzeng/laravel_bolg.git");
 $rest . PHP_EOL;
 
