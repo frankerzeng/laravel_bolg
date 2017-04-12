@@ -35,4 +35,11 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    // weixin 微信
+    'weixin' => [
+        'cliend_id' => env("WEIXIN_KEY"),
+        'cliend_secret' => env("WEIXIN_SECRET"),
+        'redirect' => env("WEIXIN_REDIRECT_URI")
+    ]
+
 ];

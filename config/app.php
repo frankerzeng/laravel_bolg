@@ -166,6 +166,8 @@ return [
         // 自定义
         App\Providers\SendMailServiceProvider::class,
 
+        // weixin 微信
+        SocialiteProviders\Manager\ServiceProvider::class,
 
         // 代码提示模块
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
@@ -215,6 +217,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // weixin 微信
+        'Socialite'=>Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
