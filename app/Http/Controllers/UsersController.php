@@ -68,6 +68,7 @@ class UsersController extends Controller {
     public function login_weixin_callback() {
         $user_data = Socialite::with("weixin")->user();
 
+        file_put_contents("ggit-webhook1.txt", json_encode($user_data), FILE_APPEND);
         print_r('-------');
         print_r($user_data);
     }
