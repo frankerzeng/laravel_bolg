@@ -27,10 +27,12 @@ print_r($sheel2);
 print_r("-----------------\n");
 
 $rest = shell_exec("cd /usr/local/nginx/html/blog && git pull git@github.com:frankerzeng/laravel_bolg.git");
-$rest . PHP_EOL;
+$rest .= PHP_EOL;
 
 $request = date("Y-m-d H:i:s") . "-----";
 $request .= $rest;
+
+$request .= '-==>' . $sheel1;
 
 $request .= "\n";
 file_put_contents("git-webhook.txt", $request, FILE_APPEND);
