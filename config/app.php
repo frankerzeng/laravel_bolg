@@ -4,10 +4,10 @@ return [
 
     'default_page_size' => 10,
     'about_me' => [
-        'name' => "frank",
-        'email' => "frankerzeng@163.com",
-        'mobile' => "18583660732",
-        'password' => "111111", // todo 改密码
+        'name' => env('NAME'),
+        'email' => env('EMAIL'),
+        'mobile' => env('MOBILE'),
+        'password' => env('PASSWORD'),
     ],
     /*
     |--------------------------------------------------------------------------
@@ -166,7 +166,7 @@ return [
         // 自定义
         App\Providers\SendMailServiceProvider::class,
 
-        
+
         // 代码提示模块
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider'
     ],
