@@ -1,5 +1,5 @@
 <?php
-/**
+/** phpinfo 接口
  * Created by PhpStorm.
  * User: Administrator
  * Date: 2017/4/12
