@@ -11,6 +11,12 @@ print_r(file_get_contents("php://input"));
 //$request = file_get_contents("php://input");
 //$content = json_decode($request);
 
+$sheel1 = shell_exec("ll");
+$sheel2 = shell_exec("/bin/ll");
+
+print_r($sheel1);
+print_r($sheel2);
+
 $rest = shell_exec("cd /usr/local/nginx/html/blog && git pull git@github.com:frankerzeng/laravel_bolg.git");
 $rest . PHP_EOL;
 
