@@ -50,3 +50,7 @@ Route::get("login", "AdminController@login_page");
 
 Route::post('/login/users', 'UsersController@login');
 Route::get('/login/after_login', 'UsersController@after_login');
+
+// weixin 微信扫码登陆
+Route::get('login/weixin','UsersController@login_weixin');
+Route::get('login/weixin/callback','UsersController@login_weixin_callback');

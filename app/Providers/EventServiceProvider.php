@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use SocialiteProviders\Manager\SocialiteWasCalled;
+use SocialiteProviders\Weixin\WeixinExtendSocialite;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -16,6 +18,10 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\SomeEvent' => [
             'App\Listeners\EventListener',
         ],
+
+        SocialiteWasCalled::class => [
+            WeixinExtendSocialite::class
+        ]
     ];
 
     /**

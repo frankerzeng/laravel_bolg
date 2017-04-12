@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Laravel\Socialite\Facades\Socialite;
 use Redirect;
 use Validator;
 use Illuminate\Http\Request;
@@ -41,9 +42,9 @@ class UsersController extends Controller {
     }
 
     public function after_login(Request $request) {
-         if (\Auth::attempt(["name" => 'frank', 'password' => '111111']))
+        if (\Auth::attempt(["name" => 'frank', 'password' => '111111']))
 
-        var_dump($request->user());
+            var_dump($request->user());
         var_dump('----');
         var_dump(\Auth::user());
         return;
@@ -54,13 +55,20 @@ class UsersController extends Controller {
         }
     }
 
-    public static function init() {
+    private static function init() {
         $about_me = config('app.about_me');
-        \DB::table(self::$table)->insert([
-            "name" => $about_me['name'],
-            "email" => $about_me['email'],
-            "password" => \Hash::make($about_me['password']),//todo 改密码
+        \DB::table(self::$table)->insert(["name" => $about_me['name'], "email" => $about_me['email'], "password" => \Hash::make($about_me['password']),//todo 改密码
         ]);
     }
 
+    public function login_weixin() {
+        return Socialite::with("weixin")->redirect();
+    }
+
+    public function login_weixin_callback() {
+        $user_data = Socialite::with("weixin")->user();
+
+        print_r('-------');
+        print_r($user_data);
+    }
 }
