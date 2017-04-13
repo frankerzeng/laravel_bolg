@@ -17,27 +17,34 @@ class UsersController extends Controller {
 
     public function login(Request $request) {
         $data = $request->all();
-        $data["name"] = $data['email'];
         $validator = Validator::make($data, User::$rules);
 
         if (!$validator->fails()) {
-            $list = \DB::table(self::$table)->get();
-            if (empty($list)) {
-                self::init();
-            }
-
-            \Auth::logout();
-
-            if (\Auth::attempt(["email" => $data['email'], 'password' => $data['password']])) {
-                // 用户名登录，或者手机号
-                // if (\Auth::attempt(["name" => 'frank1', 'password' => '111111']))
-
-                return ["code" => 0, "msg" => "success"];
-            } else {
-                return ["code" => 1, "msg" => "fail"];
-            }
+            return $this->login_type($data, "email");
         } else {
-            return ["code" => 2, "msg" => json_encode($validator->errors())];
+            $data["name"] = $data['email'];
+            unset($data['email']);
+            $validator = Validator::make($data, User::$rules);
+            if (!$validator->fails()) {
+                return $this->login_type($data, "name");
+            } else {
+                return ["code" => 2, "msg" => json_encode($validator->errors())];
+            }
+        }
+    }
+
+    private function login_type($data, $type) {
+        $list = \DB::table(self::$table)->limit(1)->get();
+        if (empty($list)) {
+            self::init();
+        }
+
+        \Auth::logout();
+
+        if (\Auth::attempt([$type => $data[$type], 'password' => $data['password']])) {
+            return ["code" => 0, "msg" => "success"];
+        } else {
+            return ["code" => 1, "msg" => "用户名或密码错误"];
         }
     }
 

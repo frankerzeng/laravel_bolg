@@ -25,8 +25,8 @@ class User extends Authenticatable
     ];
 
     public static $rules = array(
-        'name' => 'required|min:2',
-        'email' => 'required|email',
+        'name' => 'min:2',
+        'email' => 'email',
         //        'email' => 'required|email|unique:users',
         'password' => 'required|alpha_num|between:6,12',
     );
